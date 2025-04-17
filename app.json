@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.talhadev767.IceBath"
     },
     "web": {
       "bundler": "metro",
@@ -36,6 +37,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "20978b88-5f47-4786-ac01-ed8df1e22fb7"
+      }
     }
   }
 }

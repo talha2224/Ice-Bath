@@ -30,8 +30,21 @@ export default function RootLayout() {
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="forget/index" options={{ headerShown: false }} />
+        <Stack.Screen name="forget/final" options={{ headerShown: false }} />
+        <Stack.Screen name="register" options={{ headerShown: false }} />
+        <Stack.Screen name="home/index" options={{ headerShown: false }} />
+        <Stack.Screen name="home/scan" options={{ headerShown: false }} />
+        <Stack.Screen name="home/control" options={{ headerShown: false }} />
+        <Stack.Screen name="home/single" options={{ headerShown: false }} />
+        <Stack.Screen name="home/temperature" options={{ headerShown: false }} />
+        <Stack.Screen name="home/schedule" options={{ headerShown: false }} />
+        <Stack.Screen name="home/log" options={{ headerShown: false }} />
+        <Stack.Screen name="home/logs" options={{ headerShown: false }} />
+        <Stack.Screen name="home/profile" options={{ headerShown: false }} />
+        <Stack.Screen name="home/notification" options={{ headerShown: false }} />
+        <Stack.Screen name="home/filter" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
