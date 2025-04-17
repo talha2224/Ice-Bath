@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Dimensions, Pressable } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Dimensions, Pressable, Linking } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import BottomNavBar from '../../components/BottomNavbar'; // Assuming this component exists
 import { router } from 'expo-router';
 
 const Home = () => {
     const [showSidebar, setShowSidebar] = useState(false)
-
+    const handleShopPress = () => {
+        Linking.openURL('https://nebula-me.ae/');
+      };
     return (
         <View style={styles.container}>
 
@@ -84,7 +86,7 @@ const Home = () => {
                                 <Ionicons name="list-outline" size={24} color="#333" />
                                 <Text style={{ marginLeft: 15, fontSize: 16, color: '#333', flex: 1 }}>Logs</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity onPress={()=>router.push("/home/logs")} style={{ flexDirection: 'row', alignItems: 'center', paddingVertical: 15, borderBottomWidth: 1, borderBottomColor: '#eee' }}>
+                            <TouchableOpacity onPress={handleShopPress} style={{ flexDirection: 'row', alignItems: 'center', paddingVertical: 15, borderBottomWidth: 1, borderBottomColor: '#eee' }}>
                                 <Ionicons name="cart-outline" size={24} color="#333" />
                                 <Text style={{ marginLeft: 15, fontSize: 16, color: '#333', flex: 1 }}>Shop</Text>
                             </TouchableOpacity>

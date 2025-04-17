@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, ScrollView, TextInput, Platform, Dimensions, Pressable } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity, ScrollView, TextInput, Platform, Dimensions, Pressable, Linking } from 'react-native';
 import BottomNavBar from '../../components/BottomNavbar';
 import { Ionicons } from '@expo/vector-icons';
 import { Picker } from '@react-native-picker/picker';
@@ -16,6 +16,9 @@ const Schedule = () => {
     const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
     const [times, setTimes] = useState([]);  // State to hold time options
 
+    const handleShopPress = () => {
+        Linking.openURL('https://nebula-me.ae/');
+      };
     useEffect(() => {
         setTimes(generateTimes());
     }, []);
@@ -169,7 +172,7 @@ const Schedule = () => {
                                 <Ionicons name="list-outline" size={24} color="#333" />
                                 <Text style={{ marginLeft: 15, fontSize: 16, color: '#333', flex: 1 }}>Logs</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity onPress={() => router.push("/home/logs")} style={{ flexDirection: 'row', alignItems: 'center', paddingVertical: 15, borderBottomWidth: 1, borderBottomColor: '#eee' }}>
+                            <TouchableOpacity onPress={handleShopPress} style={{ flexDirection: 'row', alignItems: 'center', paddingVertical: 15, borderBottomWidth: 1, borderBottomColor: '#eee' }}>
                                 <Ionicons name="cart-outline" size={24} color="#333" />
                                 <Text style={{ marginLeft: 15, fontSize: 16, color: '#333', flex: 1 }}>Shop</Text>
                             </TouchableOpacity>
